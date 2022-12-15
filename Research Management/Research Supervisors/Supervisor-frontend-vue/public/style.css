@@ -1,0 +1,117 @@
+header{
+    background-color: #29377c;
+}
+.data{
+    float: right;
+    margin-top: 8px;
+    padding-right: 30px;
+}
+.data ul li {
+    display: inline;
+    color: white;
+    padding: 10px;
+    padding-right: 10px;
+}
+.data ul li:hover{
+    background-color: #E3AE1D;
+}
+.icon{
+    display: inline-block;
+    color: white;
+    opacity: 0.5;
+    padding: 10px;
+    padding-left: 60px;
+    word-spacing: 20px;
+}
+.icon i{
+    padding-right: 10px;
+    /* border-right: 2px solid black;   */
+}
+.data ul{
+    display: inline;
+    
+}
+body{
+    margin: 0px;
+}
+section ul {
+    display: inline;
+  float: right;
+  margin-top: 10px;
+}
+section ul :hover{
+    color:  #E3AE1D;
+}
+section{
+    margin-top: 30px;
+}
+section ul li{
+  
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+section .img{
+    margin-left: 40px;
+    display: inline;
+}
+.sec3{
+    text-align: center;
+    background-color: #29377c;
+    padding: 20px;
+}
+.sec3 div input {
+    padding: 15px;
+    width: 600px;
+    border: 0px;
+}
+.sec3 div  button{
+    padding: 15px;
+    width: 100px;
+    border: 0px;
+    background-color: #E3AE1D;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/*  */
+footer{
+    background-color: #29377c;
+}
+footer .row{
+    /* margin: 40px 0px ; */
+    padding: 40px 0px;
+    color: white;
+}
+footer li{
+    list-style: none;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #E3AE1D;
+}
+footer ul{
+    padding: 0px;
+}
+
+.addresspart{
+    font-size: 13px;
+    color: gray;
+}
+
+.addresspart a{
+    color: gray;
+}
+.wed-rights{
+    text-align: center;
+    background-color: #29377c;
+    color: white;
+}

@@ -1,0 +1,37 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: #000 !important;
+    color: #fff !important;
+}
+span{
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.sos-sec{
+    box-shadow: 0 0 4px 0 #ffa709;
+    padding: 15px;
+    margin-top: 25px;
+    position: relative;
+}
+table{
+    margin-top: 30px;
+    border-color: linear-gradient(to right, #ff105f, #ffad06);
+}
+td{
+    color: #fff;
+   padding: 20px; 
+   text-align: left;
+}
+th{
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 20px; 
+    text-align: left;
+}

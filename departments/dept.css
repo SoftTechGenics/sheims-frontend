@@ -1,0 +1,26 @@
+.depart{
+    text-align: center;
+    width: 500px;
+    margin: 0px auto;
+    
+}
+ h1{
+    text-align: center;
+    color: rgb(55, 133, 100);
+ }
+ th, td {
+    border-bottom: 1px solid  black;
+  } 
+  table {
+    border-collapse: collapse;
+ } 
+ td.ali{
+    border-bottom: hidden;
+ }
+ th{
+    color: rgb(55, 133, 100) ;
+ }
+ #zubair{
+    color:  rgb(55, 133, 100);
+    font-weight:bold;
+ }

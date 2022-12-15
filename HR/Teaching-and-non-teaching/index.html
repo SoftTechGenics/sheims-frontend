@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <style>
         body {
@@ -169,10 +170,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="hover">Muhammad Ali</td>
-                                            <td class="hover">Software Engineering</td>
-                                            <td class="hover">(171) 555-2222</td>
+                                        <tr v-for="i in teaching">
+                                            <td class="hover">{{i.name}}</td>
+                                            <td class="hover">{{i.dept}}</td>
+                                            <td class="hover">{{i.phone}}</td>
                                             <td>
                                                 <a class="add" title="Add" data-toggle="tooltip"><i
                                                         class="material-icons">&#xE03B;</i></a>
@@ -182,32 +183,7 @@
                                                         class="material-icons">&#xE872;</i></a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="hover">Babar Azam</td>
-                                            <td class="hover">Management Sciences</td>
-                                            <td class="hover">(313) 555-5735</td>
-                                            <td>
-                                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE03B;</i></a>
-                                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE254;</i></a>
-                                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="hover">Muhammad Rizwan</td>
-                                            <td class="hover">Islamic Studies</td>
-                                            <td class="hover">(503) 555-9931</td>
-                                            <td>
-                                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE03B;</i></a>
-                                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE254;</i></a>
-                                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                                 <button type="add" data-toggle="collapse" data-target="#collapseForm"
@@ -246,10 +222,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="hover">Khizer Usama</td>
-                                            <td class="hover">Administration</td>
-                                            <td class="hover">(171) 555-2222</td>
+                                        <tr v-for="i in nonTeaching">
+                                            <td class="hover">{{i.name}}</td>
+                                            <td class="hover">{{i.desig}}</td>
+                                            <td class="hover">{{i.phone}}</td>
                                             <td>
                                                 <a class="add" title="Add" data-toggle="tooltip"><i
                                                         class="material-icons">&#xE03B;</i></a>
@@ -259,32 +235,7 @@
                                                         class="material-icons">&#xE872;</i></a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="hover">Iftikhar Ahmad</td>
-                                            <td class="hover">Clerk</td>
-                                            <td class="hover">(313) 555-5735</td>
-                                            <td>
-                                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE03B;</i></a>
-                                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE254;</i></a>
-                                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="hover">Shan Masood</td>
-                                            <td class="hover">Sweeper</td>
-                                            <td class="hover">(503) 555-9931</td>
-                                            <td>
-                                                <a class="add" title="Add" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE03B;</i></a>
-                                                <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE254;</i></a>
-                                                <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                                 <button type="add" data-toggle="collapse" data-target="#collapseForm2"
@@ -335,6 +286,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

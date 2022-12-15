@@ -1,0 +1,57 @@
+{% include "header.html" %}
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+<h2>Departments<button type="button" class="btn btn-success  pull-right" data-toggle="modal"
+        data-target="#myModal">Add Teacher Data</button></h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Department</th>
+        <th>Qualifications</th>
+        <th>Action</th>
+    </tr>
+    {% for row in  DPT %}
+    <tr>
+        <td>{{row.0}}</td>
+        <td>{{row.1}}</td>
+        <td>
+            <a href="/update/{{row.0}}" class="btn btn-warning btn-xs" data-toggle="modal"
+                data-target="#modaledit{{row.0}}">Edit</a>
+            <a href="/delete/{{ row.0 }}" class="btn btn-danger btn-xs"
+                onclick="return confirm('Are You Sure For Delete?')">Delete</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Please Insert Teacher Data</h4>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url_for('insert') }}" method="POST">
+                    <div class="form-group">
+                        <label>Teacher Name:</label>
+                        <input type="text" class="form-control" name="teacher_name" required="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Qualificatios:</label>
+                        <input type="text" class="form-control" name="qualifications" required="1">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Insert Data</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>

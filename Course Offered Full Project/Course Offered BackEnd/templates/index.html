@@ -1,0 +1,645 @@
+<!-- templates/index.html -->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Offered</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<style>
+
+/* current css */
+
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.tableofCourse {
+
+text-align: center;
+margin: 0 auto;
+width: 50%;
+
+
+}
+th,td,tr{
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+/* th{
+  background-color: lightblue;
+} */
+td{
+  padding:0px;
+}
+h1{
+  text-align: center;
+}
+header{
+    background-color: #29377c;
+}
+.data{
+    float: right;
+    margin-top: 8px;
+    padding-right: 30px;
+}
+.data ul li {
+    display: inline;
+    color: white;
+    padding: 10px;
+    padding-right: 10px;
+}
+.data ul li:hover{
+    background-color: #E3AE1D;
+}
+.icon{
+    display: inline-block;
+    color: white;
+    opacity: 0.5;
+    padding: 15px;
+    padding-left: 60px;
+    word-spacing: 20px;
+}
+.icon i{
+    border-right: 2px solid black;  
+}
+.data ul{
+    display: inline;
+    
+}
+body{
+    margin: 0px;
+}
+section ul {
+    display: inline;
+  float: right;
+}
+section ul :hover{
+    color:  #E3AE1D;
+}
+section{
+    margin-top: 40px;
+}
+section ul li{
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+section .img{
+    margin-left: 80px;
+    display: inline;
+}
+.sec3{
+    text-align: center;
+    background-color: #29377c;
+    padding: 20px;
+}
+.sec3 div input {
+    padding: 15px;
+    width: 600px;
+    border: 0px;
+}
+.sec3 div  button{
+    padding: 15px;
+    width: 100px;
+    border: 0px;
+    background-color: #E3AE1D;
+    color: white;
+    text-transform: uppercase;
+}
+
+.background{
+  background-color:  lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+.frow {
+  background-color:  #29377c;
+  color: white;
+}
+
+
+
+
+
+
+
+/* last File css */
+
+ul {
+ padding:0px;
+ margin: 0px;
+}
+
+.nev {
+  background-color: #29377c;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.name {
+  color: white;
+  font-size: 40px;
+}
+
+.heading {
+  background-color: rgb(73, 138, 196);
+  text-align: center;
+  color: white;
+}
+
+.Days-Row {
+  display: flex;
+  text-align: justify;
+  word-wrap: normal;
+}
+
+.dropMenu {
+  background-color: rgb(226, 154, 67);
+}
+
+.dropmenu,
+.eachMenu {
+  font-size: 20px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
+.dropmenu {
+  margin-top: -10px;
+}
+
+.section {
+  margin-left: 190px;
+}
+
+.department {
+  margin-left: 70px;
+}
+.campus,
+.semester {
+  margin-left: 20px;
+}
+.option {
+  margin-left: 15px;
+  border-radius: 7px;
+}
+
+/* .corner_box {
+  padding: 0;
+  font-size: 15px;
+  color: white;
+  background: rgba(13, 177, 75, 1);
+  background: linear-gradient(
+    19deg,
+    rgba(13, 177, 75, 1) 0%,
+    rgba(13, 177, 75, 1) 51%,
+    rgba(21, 57, 128, 1) 51%,
+    rgba(21, 57, 128, 1) 100%
+  );
+} */
+
+.ddaay {
+  margin-left: 65px;
+}
+
+/* .breaktime {
+  background-color: rgb(23, 220, 23) !important;
+  text-align: center !important;
+  font-size: 25px;
+  padding: 25px !important;
+  font-weight: bold;
+} */
+
+.tt_heading {
+  padding: 20px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  background-color: #3f5ffd;
+}
+
+.week {
+  background-color: rgb(21, 57, 128, 1) !important;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+#leftbox {
+  float:left; 
+  background:green;
+               
+}
+#middlebox{
+   float:left; 
+
+   align-items: center;
+   
+   margin: 10px 100px 10px 100px;
+   background:#D6E4E5;
+ }
+  
+            
+.TimeOfTable {
+  float:left; 
+  background:rgb(225, 160, 20);
+}            
+
+/* .timeside {
+  background-color: rgb(13, 177, 75, 1) !important;
+  color: white !important;
+  text-align: center !important;
+  font-size: 20px;
+} */
+
+.box.over {
+  border: 3px dotted #666;
+}
+
+/* #response {
+ padding:10px;
+ background-color:#9F9;
+ border:2px solid #396;
+ margin-bottom:20px;
+} */
+/* .list {
+  padding:10px;
+ background-color:#9F9;
+ border:2px solid #396;
+ margin-bottom:20px;
+} */
+#list li {
+ margin: 0 0 3px;
+ padding:8px;text-align:left;
+ background-color:#00CCCC;
+ color:#fff;
+ list-style: none;
+ border: #CCCCCC solid 1px;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){  
+   function slideout(){
+    setTimeout(function(){
+      $("#response").slideUp("slow", function () {
+    });
+    }, 2000);
+  }
+   
+  $("#response").hide();
+  $(function() {
+    $("#list ul").sortable({ opacity: 0.8, cursor: 'move', update: function() {
+      var item_order = new Array();
+      $('ul.reorder li').each(function() {
+          item_order.push($(this).attr("id"));
+      }); 
+      var order_string = 'order='+item_order;
+      $.ajax({
+        method: "POST",
+        url: "/updateList",
+        data: order_string,
+        cache: false,
+        success: function(data){    
+            $("#response").html(data);
+            $("#response").slideDown('slow');
+            slideout();
+        }
+    });               
+    }         
+    });
+   });
+  
+}); 
+</script>
+</head>
+<body>
+
+<!-- current html -->
+
+<header>
+  <div class="icon"></div>
+ 
+  <div class="data"> <ul>
+      <li>LMS</li> 
+      <li>My IUB</li>
+      <li>Eportal</li>
+      <li>Gallary</li>
+      <li>News cuts</li>
+      <li>Tenders</li>
+      <li>Rules</li>
+      <li>Careers</li>
+      <li>Download</li>
+  </ul>
+</div>
+</header>
+<section>
+<div class="img"><img src="/greyheader.png" width="400px" height="50px" alt=""> </div>
+  <ul>
+      <li>About</li>
+      <li>Administration</li>
+      <li>Admissions</li>
+      <li>Acadmics</li>
+      <li>Campuses</li>
+      <li>Campus life</li>
+      <li>Publications</li>
+  </ul>
+</section>
+<section class="sec3">
+<div>
+<input type="search" placeholder="Enter Max 30 Letters"><button class="search">search</button>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- last File html -->
+
+<center> 
+  <!-- <header>
+    <div class="nev">
+      <div>
+        <img
+          src="/images/myiublogo.png"
+          class="logo"
+          alt="IUB logo"
+          width="170"
+          height="50"
+        />
+      </div>
+      <div class="name">The Islamia University of Bahawalpur</div>
+      <div>
+        <img
+          src="/images/user.png"
+          alt=""
+          class="user"
+          width="50"
+          height="50"
+        />
+      </div>
+    </div>
+  </header> -->
+
+  <!-- <div>
+    <h1 class="heading">Time Table</h1>
+  </div>
+  <div></div>
+  <form action="">
+    <div class="dropMenu">
+      <div class="dropmenu">
+        <label class="campus" for="Campus">Select Campus </label>
+        <select class="option" name="campus-name" id="Campus-names">
+          <option value="none">None</option>
+          <option value="RYKC">Rahim Yar Khan Campus</option>
+          <option value="AC">Abbasia Campus</option>
+          <option value="BJC">Baghdad-ul-Jadeed Campus</option>
+          <option value="BNS">Bahawalnagar Sub-Campus</option>
+          <option value="KhFC">Khawaja Fareed Campus</option>
+        </select>
+
+        <label class="department" for="department"
+          >Select Department
+        </label>
+        <select
+          class="option"
+          name="department-names"
+          id="departments-names"
+        >
+          <option value="none">None</option>
+          <option value="DCS">Department of Computer Science</option>
+          <option value="DIT">Department of Information Technology</option>
+          <option value="DSE">Department of Software Engineering</option>
+          <option value="DIS">Department of Information Security</option>
+          <option value="DAI">Department of Artificial Intelligence</option>
+          <option value="DDS">Department of Data Science</option>
+        </select>
+      </div>
+      <br />
+      <div class="eachMenu">
+        <label class="semester" for="semester">Select Semester </label>
+        <select class="option" name="semester-names" id="semesters-names">
+          <option value="none">None</option>
+          <option value="fs">Firsr Semester</option>
+          <option value="ss">Second Semester</option>
+          <option value="ts">Third Semester</option>
+          <option value="fs">Fourth Semester</option>
+          <option value="fis">Fifth Semester</option>
+          <option value="ss">Sixth Semester</option>
+          <option value="ses">Seventh Semester</option>
+          <option value="es">Eight Semester</option>
+        </select>
+
+        <br />
+
+        <label class="section" for="section">Select Section </label>
+        <select class="option" name="section-names" id="section-names">
+          <option value="none">None</option>
+          <option value="ma">Morning (A)</option>
+          <option value="mb">Morning (B)</option>
+          <option value="ea">Evening (A)</option>
+          <option value="eb">Evening (B)</option>
+        </select>
+      </div>
+      <br />
+    </div>
+  </form>  -->
+<!-- <p><h1 style="color: rgb(208, 8, 8);background-color: #1c200a;">  <b>Topic:   </b> <i> <u>Drag&DropForSlotAdjustment</u> </i></h1></p>
+<p><h1 style="background-color: #CCCCCC;">TIME TABLE</h1></p>
+
+ <div>
+  <div class="TimeOfTable">
+    <h3 style="background-color: #d4aa12; color: #fff; width: 100px; padding: 5px;"><p>Time</p></h3>
+<h4>8:00 </h4>
+<h4>8:30 </h4>
+<h4>9:00 </h4>
+<h4>9:30 </h4>
+<h4>10:00 </h4>
+<h4>10:30 </h4>
+<h4>11:00 </h4>
+<h4>11:30 </h4>
+<h4>12:00 </h4>
+<h4>12:30 </h4>
+<h4>13:00 </h4>
+<h4>13:30 </h4>
+<h4>14:00 </h4>
+<h4>14:30 </h4>
+<h4>15:00 </h4>
+<h4>15:30 </h4>
+<h4>16:00 </h4>
+<h4>16:30 </h4>
+<h4>17:00 </h4>
+
+
+
+  </div> -->
+
+<!-- <div id = "leftbox">
+  <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Monday</p></h3> 
+
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+</div>
+
+<div id = "middlebox">
+   <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Tuesday</p></h3> 
+
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+
+</div>
+<div id = "middlebox">
+   <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Wednesday</p></h3> 
+
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+
+</div>
+<div id = "middlebox">
+   <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Thursday</p></h3> 
+
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+
+</div>
+<div id = "middlebox">
+  <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Friday</p></h3> 
+
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+
+</div>
+<div id = "middlebox"> -->
+  <!-- <h3 style="background-color: #d4aa12; color: #fff; width: 250px; padding: 5px;"><p>Saturday</p></h3> -->
+
+ 
+
+  <h1 style="background-color: #E3AE1D; padding: 5px; color: white;">Course offered</h1>
+
+  <!-- <h2 style="background-color: #D6E4E5; padding: 3px;">
+    Faculty Of Computing
+  </h2> -->
+ 
+  <div id = "middlebox">
+    
+  <h3 >Faculty Of Computing</h3>
+  <div style="width:250px;">
+    <div id="list">
+    <div id="response"> </div>
+      <ul class="reorder">
+       {% for row in dragdrop %}
+        <li id="{{row.id}}">{{row.text}}
+          <div class="clear"></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+
+</div>
+<div id = "middlebox">
+  <h3>Faculty Of Engineering</h3> 
+
+ <div style="width:250px;">
+   <div id="list">
+   <div id="response"> </div>
+     <ul class="reorder">
+      {% for row in dragdrop %}
+       <li id="{{row.id}}">{{row.text}}
+         <div class="clear"></div>
+       </li>
+       {% endfor %}
+     </ul>
+   </div>
+  </div>
+
+
+</div>
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+</center>
+</body>
+</html>
