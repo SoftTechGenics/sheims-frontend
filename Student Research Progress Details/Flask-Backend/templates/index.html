@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='../static/styles/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="head">    
+        </div>
+        <div class="data"> <ul>
+            <li>LMS</li>
+            <li>My IUB</li>
+            <li>Eportal</li>
+            <li>Gallary</li>
+            <li>News Cuts</li>
+            <li>Tenders</li>
+            <li>Rules</li>
+            <li>Careers</li>
+            <li>Download</li>
+        </ul>
+    </div>
+</header>
+<section>
+    <div class="img"><img src="../static/images/greyheader.png" width="330px" height="50px" alt=""> </div>
+        <ul>
+            <li>About</li>
+            <li>Administration</li>
+            <li>Admissions</li>
+            <li>Academics</li>
+            <li>Campuses</li>
+            <li>Campus Life</li>
+            <li>Publications</li>
+        </ul>
+</section>
+<section class="sec3">
+   <div>
+    <input type="search" placeholder="Enter Max 30 Letters"><button class="search">search</button>
+   </div>
+ </section>
+    <div class="container py-5">
+    <h1>Progress Report</h1>
+    <table class="table table-striped">
+       <tr> <td class="color"> Name</td>
+        <td class="color">Email</td>
+        <td class="color">Registration No.</td>
+        <td class="color">Supervisor Name</td>
+        <td class="color">Last Submitted Project</td>
+        <td class="color">Last Submitted Date</td>
+        <td class="color">Status</td></tr>
+    {%for detail in progress%}
+    <tr>
+        <td>{{detail.name}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.registration}}</td>
+        <td>{{detail.supervisor}}</td>
+        <td>{{detail.lastsubmittedproject}}</td>
+        <td>{{detail.lastsubmitteddate}}</td>
+        <td>{{detail.overallprojectstatus}}</td>
+</tr>
+    {% endfor %}
+    </table>
+    <br>
+    <br>
+    <p>  <span  class="fw-bold">  Completion Rate  </span>   : 85%</p>
+    <p><span class="fw-bold"> Overdue Projects:</span> Security Services, Network Algorithms, Interaction Design, Operations Research.		</p>
+    <p><span class="fw-bold"> Project  Problems  Id </span>:  31211,737373.</p>
+    <br><br>
+    <table class="table table-striped">
+        <tr>
+            <td class="color w-r1">Period Converting</td>
+            <td  class="w-r1"  >  Aug 20, 2020   </td>
+            <td class="color">To</td>
+            <td class="w-r1"  >  Aug 20, 2022</td>
+        </tr>
+        <tr><td class="color">Overall Project Status</td>
+        <td colspan="4">  Approximately Completed  </td>    </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <h1>Semester 1</h1>
+   
+        <table class="table table-striped">
+              <tr>
+                <th scope="col">Project Id</th>
+                <th scope="col">Project</th>
+                <th scope="col">Status</th>
+                <th scope="col">Project Overview</th>
+                <th scope="col"> Due Date </th>
+                <th scope="col"> Submit Date </th>
+                <th scope="col"> Action </th>
+              </tr>
+                {% for s1 in progress_1 %}
+                <tr>
+                    <td>{{s1.id}}</td>
+                    <td>{{s1.project}}</td>
+                    <td>{{s1.status}}</td>
+                    <td>{{s1.project_overview}}</td>
+                    <td>{{s1.due_date}}</td>
+                    <td>{{s1.submit_date}}</td>
+                    <td><button class="btn btn-primary  px-4 my-2 " > Edit   </button> <button  class="btn btn-danger  " >  Danger </button>   </td>
+
+                </tr>
+                {% endfor %}
+          </table>
+          <br>
+          <hr>
+          <br>
+          <h1>Semester 2</h1>
+         
+              <table class="table table-striped">
+                    <tr>
+                      <th scope="col">Project Id</th>
+                      <th scope="col">Project</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Project Overview</th>
+                      <th scope="col"> Due Date </th>
+                      <th scope="col"> Submit Date </th>
+                      <th scope="col"> Action </th>
+
+                    </tr>
+                    {% for s2 in progress_2 %}
+                    <tr>
+                        <td>{{s2.id}}</td>
+                        <td>{{s2.project}}</td>
+                        <td>{{s2.status}}</td>
+                        <td>{{s2.project_overview}}</td>
+                        <td>{{s2.due_date}}</td>
+                        <td>{{s2.submit_date}}</td>
+                        <td><button class="btn btn-primary  px-4 my-2 " > Edit   </button> <button  class="btn btn-danger  " >  Danger </button>   </td>
+
+                    </tr>
+                    {% endfor %}
+                </table> 
+                <br>
+                <hr>
+                <br>
+                <h1>Semester 3</h1>
+               
+                    <table class="table table-striped">
+                          <tr>
+                            <th scope="col">Project Id</th>
+                            <th scope="col">Project</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Project Overview</th>
+                            <th scope="col"> Due Date </th>
+                            <th scope="col"> Submit Date </th>
+                             <th scope="col"> Action </th>
+
+                          </tr>
+                          {% for s3 in progress_3 %}
+                          <tr>
+                            <td>{{s3.id}}</td>
+                            <td>{{s3.project}}</td>
+                            <td>{{s3.status}}</td>
+                            <td>{{s3.project_overview}}</td>
+                            <td>{{s3.due_date}}</td>
+                            <td>{{s3.submit_date}}</td>
+                            <td><button class="btn btn-primary  px-4 my-2 " > Edit   </button> <button  class="btn btn-danger  " >  Danger </button>   </td>
+
+                        </tr>    
+                        {% endfor %}
+                      </table>
+                      <br>
+                      <hr>
+                      <br>
+                      <h1>Semester 4</h1>
+                     
+                          <table class="table table-striped">
+                                <tr>
+                                  <th scope="col">Project Id</th>
+                                  <th scope="col">Project</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Project Overview</th>
+                                  <th scope="col"> Due Date </th>
+                                  <th scope="col"> Submit Date </th>
+                                  <th scope="col"> Action </th>
+                                </tr>
+                            {% for s3 in progress_3 %}
+                        <tr>
+                            <td>{{s3.id}}</td>
+                            <td>{{s3.project}}</td>
+                            <td>{{s3.status}}</td>
+                            <td>{{s3.project_overview}}</td>
+                            <td>{{s3.due_date}}</td>
+                            <td>{{s3.submit_date}}</td>
+                            <td><button class="btn btn-primary  px-4 my-2 " > Edit   </button> <button  class="btn btn-danger  " >  Danger </button>   </td>
+
+                        </tr>    
+                        {% endfor %}
+                            </table>
+</div>
+<footer class="py-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Video Gallery</h4><small class="text-gray">Official Youtube Channel The Islamia University of
+                        Bahawalpur, Pakistan</small>
+                    <div class="bot-gal h-vid ho-event-mob-bot-sp mt-3"><iframe
+                            src="https://www.youtube.com/embed/eRD0zToypAo?autoplay=0&amp;showinfo=0&amp;controls=0"
+                            allowfullscreen=""></iframe></div>
+                </div>
+                <div class="col-md-4">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li class=""><a href="https://www.iub.edu.pk/faqs" target="_self"><i
+                                    class=""></i><span>Faq's</span></a></li>
+                        <li class=""><a href="https://www.iub.edu.pk/downloads" target="_self"><i
+                                    class=""></i><span>Downloads</span></a></li>
+                        <li class=""><a href="https://www.iub.edu.pk/quick-links-iub" target="_self"><i
+                                    class=""></i><span>Quick Links</span></a></li>
+                        <li class=""><a href="https://www.iub.edu.pk/terms-of-use" target="_self"><i
+                                    class=""></i><span>Terms of Use</span></a></li>
+                        <li class=""><a href="https://www.iub.edu.pk/terms-of-use" target="_self"><i
+                                    class=""></i><span>Terms of Use</span></a></li>
+                        <li class=""><a href="https://www.iub.edu.pk/terms-of-use" target="_self"><i
+                                    class=""></i><span>Terms of Use</span></a></li>
+                        <li class=""><a href="https://alumni.iub.edu.pk/" target="_blank"><i class=""></i><span>Join IUB
+                                    Alumni Network</span></a></li>
+                        <li class="current"><a href="https://iub.edu.pk/societies-overview" target="_self"><i
+                                    class=""></i><span>IUB Student Societies</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Get in Touch</h4>
+                    <div class="addresspart">
+                        <p>Address: Registrar Office, Abbasia Campus, University Chowk, Bahawalpur.</p>
+                        <p>Phone: <a href="#!">+92 - 62 - 9250235</a></p>
+                        <p>Helpline Center: 03469255555, 03479255555, +92-62-9255580</p>
+                        <p>Email: <a href="#!">info@iub.edu.pk</a></p>
+                    </div>
+                    <h6>SOCIAL MEDIA | MY IUB APP</h6><a class="col-sm-2" href="https://twitter.com/theiubwp"><i
+                            class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="google-map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.068624812913!2d71.68870221426052!3d29.397548482122264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b90eaa761f651%3A0x7cf2b0b3cfe14c1a!2sThe%20Islamia%20University%20of%20Bahawalpur!5e0!3m2!1sen!2s!4v1570701139431!5m2!1sen!2s"
+            width="100%" height="350" frameborder="0" class="page_speed_1023023078" allowfullscreen=""></iframe></div>
+    <section class="wed-rights">
+        <div class="container">
+            <div class="row">
+                <div class="copy-right">
+                    <p>© 2022 The Islamia University of Bahawalpur iub.edu.pk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
